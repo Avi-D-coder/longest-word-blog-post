@@ -1,0 +1,48 @@
+name:                longestWordHS
+version:             0.1.0.0
+github:              "Avi-D-Coder/longestWordHS"
+license:             BSD3
+author:              "Avi ד"
+maintainer:          "avi.the.coder@gmail.com"
+copyright:           "Avi ד 2018"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/Avi-D-Coder/longestWordHS#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  longestWordHS-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - longestWordHS
+
+tests:
+  longestWordHS-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - longestWordHS
